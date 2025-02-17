@@ -1,0 +1,23 @@
+// ----------------- MAIN COMPONENTS -----------------
+
+@import "../components/main-components/main-copy.scss";
+@import "../components/main-components/main-info.scss";
+@import "../components/main-components/main-table.scss";
+@import "../components/main-components/address-form.scss";
+@import "../components/main-components/miners-info.scss";
+
+
+
+//new
+
+@import "../components/main-components/main-top.scss";
+@import "../components/main-components/request-form.scss";
+
+// ----------------- BLOCK COMPONENTS -----------------
+@import "../components/history-list.scss";
+@import "../components/task-list.scss";
+@import "../components/task-card.scss";
+@import "../components/wallet-card.scss";
+@import "../components/boost-card.scss";
+@import "../components/boost-list.scss";
+@import "../components/level-info.scss";

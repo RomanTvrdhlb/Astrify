@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro15'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Devil</h1>
+
+            <p><b>Love:</b> Watch for toxic dynamics, jealousy, or codependency in your relationship. If you're feeling
+              trapped, it may be time to set boundaries or reassess the connection.</p>
+
+            <p><b>Career:</b> Avoid workplace manipulation, unethical shortcuts, or power struggles. Stay true to your values
+              and don’t let ambition lead you down the wrong path.</p>
+
+            <p><b>Finances:</b> Be cautious of overspending, debt, or material obsessions. Avoid risky financial decisions and
+              recognize unhealthy spending habits.</p>
+
+            <p><b>Advice:</b> The Devil urges you to recognize what’s holding you back - whether it's a habit, relationship, or
+              mindset. Awareness is your key to freedom.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

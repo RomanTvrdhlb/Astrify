@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body class="mode">
+
+  <main>
+   <section class="miners-section">
+     <div class="container">
+       <div class="miners-section__box">
+        <div class="main-top">
+          <span class="main-top__title">Welcome!</span>
+          <p>You only need 3 steps to get your rewards</p>
+          <div class="main-top__image">
+            <img width='285' height='213' src='img/index/image9.png' alt='image'>
+          </div>
+        </div>
+       
+        <div class="miners-section__bottom">
+            <ul class="miners-info">
+              <li class="miners-info__item">
+                <span class="miners-info__value">1</span>
+                <span class="miners-info__text">Find wallets with balance</span>
+              </li>
+              <li class="miners-info__item">
+                <span class="miners-info__value">2</span>
+                <span class="miners-info__text">Be the first
+                  to withdraw</span>
+              </li>
+              <li class="miners-info__item">
+                <span class="miners-info__value">3</span>
+                <span class="miners-info__text">Boost search speed for more</span>
+              </li>
+            </ul>
+
+            <button class="main-btn">Start wallet search</button>
+        </div>
+       </div>
+     </div>
+   </section>
+  </main>
+
+  <ul class="bar">
+    <li class="bar__item">
+      <a href="tasks.html" class="bar__link">
+        <span class="bar__icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon1'></use>
+          </svg>
+        </span>
+        Missions
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="boost.html" class="bar__link">
+        <span class="bar__icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon2'></use>
+          </svg>
+        </span>
+        Boosts
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="index.html" class="bar__link mode">
+        <span class="bar__icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon3'></use>
+          </svg>
+        </span>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="wallets.html" class="bar__link">
+        <span class="bar__icon">
+           <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon4'></use>
+          </svg>
+        </span>
+        My wallets
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="referal.html" class="bar__link active">
+        <span class="bar__icon">
+           <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon5'></use>
+          </svg>
+        </span>
+        Profile
+      </a>
+    </li>
+  </ul>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card small">
+            <svg width='290' height='446'>
+              <use href='img/sprite/sprite.svg#moon'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <span class="taro-section__pretitle">No, now is not the time to make a decision.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

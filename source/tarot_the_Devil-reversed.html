@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro16'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Devil</h1>
+
+            <p><b>Love:</b> You're breaking free from toxic relationships or unhealthy patterns. This is a time for healing,
+              setting boundaries, and regaining emotional independence.</p>
+
+            <p><b>Career:</b> Escaping workplace manipulation or toxic dynamics. You may be finding a healthier balance between
+              ambition and ethics.</p>
+
+            <p><b>Finances:</b> Gaining control over spending habits or overcoming financial struggles. A fresh start is
+              possible with responsible choices.</p>
+
+            <p><b>Advice:</b> The Devil Reversed signals liberation. You are stepping away from destructive influences and
+              making choices that empower you. Keep moving forward with confidence.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

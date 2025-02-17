@@ -1,0 +1,71 @@
+.copy-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 5;
+  margin: 0 7px;
+
+  &__label {
+    width: 100%;
+    display: flex;
+    grid-gap: 12px;
+    height: 47px;
+    padding: 8px 8px 12px 13px;
+    background: rgba(var(--bg-c),1.0);
+    border-radius: 12px;
+  }
+
+  .copy-btn{
+    margin-top: 2px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: var(--font-family);
+    color:  rgba(var(--cl-a),1.0);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 133%;
+      color:  rgba(var(--cl-a),1.0);
+    }
+  }
+
+  &--mode{
+    margin: 0;
+    
+    .copy-form{
+      &__label {
+        padding: 0;
+        background: transparent;
+        border-radius: initial;
+        height: fit-content;
+        gap: 4px;
+        align-items: center;
+      }
+
+      &__input{
+        max-width: 103px;
+        width: fit-content;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+
+    .copy-btn{
+      width: 20px;
+      height: 20px;
+      margin-top: 0;
+      
+    }
+  }
+}

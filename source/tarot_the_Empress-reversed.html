@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro10'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Empress Reversed</h1>
+
+            <p><b>Love:</b> There could be emotional neglect or imbalance in your relationships today. Pay attention to areas
+              where you or your partner may be neglecting each other's needs, or where affection and care are lacking.
+              This is a time to address any emotional gaps or unspoken issues in your partnership.</p>
+
+            <p><b>Career:</b> You might face creative blocks or feel your projects aren’t progressing as expected. Lack of
+              inspiration or energy could be hindering your work, so take a step back and reflect before moving forward.
+            </p>
+
+            <p><b>Finances:</b> Financial stagnation is possible today. Be mindful of overspending and make sure you’re
+              sticking to your financial plan to avoid unnecessary strain.</p>
+
+            <p><b>Advice:</b> The Empress Reversed urges you to address neglected areas in your life, especially where care,
+              creativity, and balance are lacking. Take time today to reconnect and restore harmony in your emotional
+              and spiritual life.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

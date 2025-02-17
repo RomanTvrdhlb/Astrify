@@ -1,0 +1,33 @@
+.modal {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  grid-gap: 18px;
+  padding: 28px 24px 25px;
+  border-radius: 16px 16px 0 0;
+  background: rgba(var(--bg-k),1.0);
+  height: calc(100% - 80px);
+  overflow: auto;
+  max-width: 600px;
+  max-height: 395px;
+  
+  @include gradient-border(var(--gradient-c), 1px);
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 100%;
+    color: rgba(var(--cl-a), 1);
+  }
+  
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 28px;
+    width: 100%;
+  }
+}
+
+

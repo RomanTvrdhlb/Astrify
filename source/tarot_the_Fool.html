@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro13'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Fool</h1>
+
+            <p><b>Love:</b> A fresh start or exciting new experiences in love are possible. Embrace spontaneity and follow your
+              heart without overthinking.</p>
+
+            <p><b>Career:</b> New opportunities may arise - take a leap of faith and trust in your abilities. Stay open-minded
+              and embrace change. </p>
+
+            <p><b>Finances:</b> Take a cautious but optimistic approach. Avoid reckless spending, but don’t be afraid to invest
+              in new opportunities.</p>
+
+            <p><b>Advice:</b> The Fool encourages you to step into the unknown with trust and excitement. Embrace new
+              beginnings, take risks, and enjoy the journey ahead!</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

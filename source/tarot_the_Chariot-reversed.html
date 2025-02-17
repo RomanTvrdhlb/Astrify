@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro2'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Chariot</h1>
+
+            <p><b>Love:</b> Confidence and a strong bond in your relationship today. You’re in control of the situation, but
+              remember not to overpower your partner. Keep the balance and respect their space.</p>
+            <p><b>Career:</b> A breakthrough is on the horizon! You're moving toward your goals with determination, and your
+              leadership skills will lead to success. Stay focused and trust your ambition.</p>
+            <p><b>Finances:</b> Confidence in managing your money is key today. You’re making wise decisions with your
+              investments and keeping your spending in check. Keep up the good work!</p>
+            <p><b>Advice:</b> Trust in your strength and direction today. Keep moving forward with confidence, and the success
+              will follow!</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

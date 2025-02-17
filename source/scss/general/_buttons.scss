@@ -1,0 +1,56 @@
+.main-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: var(--font-family);
+  text-align: center;
+  width: fit-content;
+  padding: 8px 16px;
+  color:  rgba(var(--cl-e),1.0);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  border-radius: 18px;
+  background: rgba(var(--bg-d),1.0);
+
+  svg,img{
+    width: 20px;
+    height: 20px;
+  }
+  
+  &:hover {
+    background: rgba(var(--bg-c),1.0);
+  }
+}
+
+
+
+
+
+
+
+//not use
+
+.copy-btn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  img, svg{
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(1px);
+  }
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro8'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Hanged Man Reversed</h1>
+
+            <p><b>Love:</b> You may feel stuck in your relationship today, unwilling to change your perspective. There could be
+              resistance to understanding your partner’s point of view.</p>
+
+            <p><b>Career:</b> Delays or obstacles may arise at work. Progress feels slow, and there may be difficulties in
+              finding new solutions or ideas.</p>
+
+            <p><b>Finances:</b> Financial decisions may be on hold or blocked. You might be hesitant to make changes, which
+              could lead to stagnation.</p>
+
+            <p><b>Advice:</b> he Hanged Man reversed urges you to stop resisting change. Break free from old patterns and
+              embrace new ways of thinking to find clarity and move forward.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

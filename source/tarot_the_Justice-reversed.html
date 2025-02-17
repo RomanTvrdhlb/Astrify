@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro4'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">Justice Reversed</h1>
+
+            <p><b>Love:</b> There may be dishonesty or imbalance in your relationships today. Be mindful of unfairness or
+              unresolved conflicts. It’s a good time to address any misunderstandings or deceit, but be careful of
+              making rash judgments.</p>
+
+            <p><b>Career:</b> You could face challenges with fairness or clarity at work. There may be unjust situations or a
+              lack of transparency. Take extra care to avoid biases and make decisions based on facts, not emotions.</p>
+
+            <p><b>Finances:</b> Watch out for financial decisions that could lead to imbalance or unfair situations. Avoid
+              risky investments or actions that could create legal or ethical issues. Stick to what you know is right.
+            </p>
+
+            <p><b>Advice:</b> Today, be cautious of dishonesty, unfairness, and lack of balance. Avoid rushing decisions and
+              take time to reassess any situations where truth is unclear. Regaining fairness will take effort, but it’s
+              worth it.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

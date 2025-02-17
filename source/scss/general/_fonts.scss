@@ -1,0 +1,40 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-style: $style;
+    font-weight: #{$weight};
+    font-family: "#{$font-family}";
+
+    font-display: swap;
+    src: url("../fonts/#{$url}.woff2") format("woff2"),
+    url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@include font-face("sf-pro-display",  "sf-pro-display", 400, normal);
+@include font-face("sf-pro-display",  "sf-pro-display-bold", 700, normal);
+@include font-face("sf-pro-display",  "sf-pro-display-medium", 500, normal);
+
+@include font-face("jeko-medium",  "Jeko-Medium", 500, normal);
+@include font-face("jeko-bold",  "jeko-bold", 700, normal);
+
+@include font-face("Commissioner",  "Commissioner-SemiBold", 600, normal);
+@include font-face("Commissioner",  "Commissioner-Regular", 400, normal);
+@include font-face("Commissioner",  "Commissioner-Medium", 500, normal);
+@include font-face("Commissioner",  "Commissioner-Bold", 700, normal);
+
+@include font-face("SFProText",  "sf-pro-text-semibold", 600, normal);
+
+@include font-face("Source-Code-Pro",  "Source-Code-Pro-Regular", 400, normal);
+@include font-face("Source-Code-Pro",  "Source-Code-Pro-Semibold", 700, normal);
+
+// 100 – Thin || Hairline
+// 200 – Extra Light || Ultra Light || Thin
+// 300 – Light
+// 450 – Demi
+// 400 – Normal || Regular
+// 500 – Medium
+// 600 – Semi Bold || Demi Bold
+// 700 – Bold
+// 800 – Extra Bold || Ultra Bold || Heavy
+// 900 – Black || Heavy
+

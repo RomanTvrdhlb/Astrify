@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+    <section class="referral-section">
+      <div class="container">
+        <div class="referral-section__box">
+
+          <div class="main-top">
+            <span class="main-top__title">Referral program</span>
+            <p>Get <b>10%</b> from your friends’ profit!</p>
+            <div class="main-top__image">
+              <img width='116' height='116' src='img/index/image1.png' alt='image'>
+            </div>
+          </div>
+
+          <form class="copy-form">
+            <label class="copy-form__label" for="address_3" data-parent-copy>
+              <input readonly type="text" name="address_3" id="address_3" class="copy-form__input" value="t.me/solhunt_bot?=ref=1xmDms...">
+              <button class="copy-btn" data-copy>
+               <img width='24' height='24' src='img/sprite/copy.svg' alt='image'>
+               </button>
+            </label>
+          </form>
+
+          <ul class="history-list">
+            <li class="history-list__row history-list__row--head">
+              <span class="history-list__name">Date</span>
+              <span class="history-list__name">User</span>
+              <span class="history-list__name">Amount</span>
+              <span class="history-list__name">Profit</span>
+            </li>
+            <li class="history-list__row">
+              <span class="history-list__value">15:57</span>
+              <span class="history-list__value"><i>dualosdualos</i></span>
+              <span class="history-list__value">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#ton'></use>
+                </svg>
+                <i>100.00</i> TON
+              </span>
+              <span class="history-list__value">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#ton'></use>
+                </svg>
+                <i>5.00</i> TON
+              </span>
+            </li>
+            <li class="history-list__row">
+              <span class="history-list__value">15:57</span>
+              <span class="history-list__value"><i>dualosdualos</i></span>
+              <span class="history-list__value">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#ton'></use>
+                </svg>
+                <i>100.00</i> TON
+              </span>
+              <span class="history-list__value">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#ton'></use>
+                </svg>
+                <i>5.00</i> TON
+              </span>
+            </li>
+            <li class="history-list__row">
+              <span class="history-list__value">15:57</span>
+              <span class="history-list__value"><i>dualosdualos</i></span>
+              <span class="history-list__value">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#ton'></use>
+                </svg>
+                <i>100.00</i> TON
+              </span>
+              <span class="history-list__value">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#ton'></use>
+                </svg>
+                <i>5.00</i> TON
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <ul class="bar">
+    <li class="bar__item">
+      <a href="tasks.html" class="bar__link">
+        <span class="bar__icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon1'></use>
+          </svg>
+        </span>
+        Missions
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="boost.html" class="bar__link">
+        <span class="bar__icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon2'></use>
+          </svg>
+        </span>
+        Boosts
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="index.html" class="bar__link mode">
+        <span class="bar__icon">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon3'></use>
+          </svg>
+        </span>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="wallets.html" class="bar__link">
+        <span class="bar__icon">
+           <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon4'></use>
+          </svg>
+        </span>
+        My wallets
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="referal.html" class="bar__link active">
+        <span class="bar__icon">
+           <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#icon5'></use>
+          </svg>
+        </span>
+        Profile
+      </a>
+    </li>
+  </ul>
+
+
+  @include('partials/modals.html')
+
+</body>
+<script src="js/main.js"></script>
+
+</html>

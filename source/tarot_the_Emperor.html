@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro11'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Emperor</h1>
+
+            <p><b>Love:</b> Stability and structure define your relationships today. This is a time for commitment,
+              reliability, and setting clear boundaries. If single, you may seek a strong, dependable partner.</p>
+
+            <p><b>Career:</b> Leadership and discipline are key. Take control of your work, stay organized, and focus on
+              long-term success. Authority figures may play a role in your career today.</p>
+
+            <p><b>Finances:</b> Financial stability comes through structure and planning. Stick to your budget and make logical
+              financial decisions to ensure long-term security.</p>
+
+            <p><b>Advice:</b> The Emperor reminds you to take control of your life with confidence and structure. Today is
+              about leadership, responsibility, and making decisions with logic rather than emotion.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

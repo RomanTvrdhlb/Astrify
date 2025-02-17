@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro12'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Emperor Reversed</h1>
+
+            <p><b>Love:</b> Control issues or power struggles may arise in relationships. Be mindful of dominance, rigidity, or
+              emotional distance - balance is key.</p>
+
+            <p><b>Career:</b> A lack of structure or poor leadership could cause frustration. Avoid being overly controlling
+              or, conversely, too passive in your work.</p>
+
+            <p><b>Finances:</b> Financial instability may stem from poor planning or impulsive decisions. Take a step back and
+              reassess your strategy.</p>
+
+            <p><b>Advice:</b> The Emperor Reversed warns against being too controlling or disorganized. Find balance between
+              authority and flexibility to regain stability in your life.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro6'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Lovers Reversed</h1>
+
+            <p><b>Love:</b> Today, you may face disharmony or indecision in your relationships. There could be a lack of
+              openness or a tough decision about your future with your partner. Take time to reflect before making any
+              moves.</p>
+
+            <p><b>Career:</b> Challenges may arise in partnerships or collaborations. You may feel uncertain about your
+              professional direction, causing confusion or delays. It's important to pause and reassess your next steps.
+            </p>
+
+            <p><b>Finances:</b> Financial decisions may be clouded by indecision or a sense of imbalance. Take time to evaluate
+              your options and avoid hasty moves. Clarity will come with patience.</p>
+
+            <p><b>Advice:</b> The Lovers Reversed cautions against making decisions based on confusion or fear. Pause, reflect,
+              and restore balance in your thoughts before moving forward. Clear your mind and trust the process.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

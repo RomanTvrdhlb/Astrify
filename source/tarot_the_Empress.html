@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="main-top">
+            <p>Tap the screen to choose your card</p>
+          </div>
+
+          <div class="taro-section__card">
+            <svg width='290' height='475'>
+              <use href='img/sprite/sprite.svg#taro9'></use>
+            </svg>
+          </div>
+
+          <div class="taro-section__info">
+            <h1 class="taro-section__title">The Empress</h1>
+
+            <p><b>Love:</b> Today, expect nurturing energy and emotional fulfillment in your relationships. There’s a strong
+              connection with your partner, and this is a great time to focus on growth and harmony together.</p>
+
+            <p><b>Career:</b> Creativity and productivity are high today. It's a perfect time to start new projects or work on
+              creative endeavors. Your efforts will be fruitful and lead to growth.</p>
+
+            <p><b>Finances:</b> Abundance and financial growth are on the horizon. This is a time of comfort and security in
+              your finances, with opportunities for expansion.</p>
+
+            <p><b>Advice:</b> The Empress encourages you to embrace creativity, growth, and nurturing energy today. Focus on
+              manifesting abundance and harmony in all areas of your life.</p>
+
+            <form class="request-form">
+
+              <label class="request-form__label" for="mess">
+                <textarea class="request-form__area" name="mess" id="mess"
+                  placeholder="Type your request to receive a personalized tarot reading"></textarea>
+                <span class="request-form__symbol"><b>0</b>/1000</span>
+              </label>
+
+              <button class="main-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

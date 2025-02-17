@@ -1,0 +1,116 @@
+.history-list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 8px;
+
+  &__row {
+    border-radius: 12px;
+    background: rgba(var(--bg-c),1.0);
+    padding: 12px 14px 12px 12px;
+
+    .history-list__value {
+      &:nth-child(2) {
+        i {
+          max-width: 65%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    &--head {
+      border: none;
+      padding: 0 14px 2px 12px;
+      background: transparent;
+    }
+
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: minmax(30px, .17fr) 0.33fr 0.47fr 0.37fr;
+    align-items: center;
+   
+
+    .history-list {
+      &__value:last-child {
+        text-align: end;
+        justify-self: end;
+      }
+
+      &__name:last-child {
+        text-align: end;
+      }
+    }
+  }
+
+  &__name {
+    font-family: var(--font5);
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(var(--cl-c),1.0);
+  }
+
+  &__value {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: var(--font3);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    gap: 3px;
+    display: inline-flex;
+    align-items: center;
+
+    i {
+      font-style: inherit;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    img,
+    svg {
+      margin-right: 5px;
+      width: 20x;
+      display: flex;
+      height: 20px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+  }
+
+
+
+
+
+
+  &--mode {
+    .history-list {
+      &__row {
+        grid-gap: 20px;
+        grid-template-columns: minmax(30px, 0.15fr) 0.35fr 0.5fr 0.3fr;
+        padding: clamp(12px, 3.125vw, 18px) 11px clamp(12px, 3.125vw, 18px) 14px;
+
+        @media (max-width: (380px)) {
+          grid-template-columns: minmax(30px, 0.12fr) 0.4fr 0.6fr 0.3fr;
+        }
+
+        &--head {
+          padding: 0 11px 0 14px;
+        }
+      }
+
+      &__value {
+        font-size: 12px;
+        grid-gap: 2px;
+
+        img,
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

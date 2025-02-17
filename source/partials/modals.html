@@ -1,0 +1,31 @@
+<div class="overlay fixed-block" data-overlay>
+
+    <div class="modal" data-popup="details">
+        <button class="modal__close close">
+            <svg width='12' height='12'>
+                <use href='img/sprite/sprite.svg#xmark'></use>
+            </svg>
+        </button>
+
+        <div class="modal__box">
+            <span class="modal__title">Wallet  details</span>
+
+            <form class="adress-form" data-parent-adress>
+                <label class="adress-form__label" for="phrase">
+                    <span class="adress-form__text">Full wallet adress:</span>
+                    <span class="adress-form__value">So11JSgBGXtPuLPjQiKy3u5CVuRXVMFnKuUELA2JRNu9x</span>
+                </label>
+
+                
+                <label class="adress-form__label" for="phrase_2" >
+                <span class="adress-form__text">Seed phrase:</span>
+                <span class="adress-form__value copy">star moon sun earth fire wind water ice cloud shadow</span>
+                  <input data-value readonly type="hidden" name="phrase_2" id="phrase_2" class="adress-form__input" value="star moon sun earth fire wind water ice cloud shadow">
+                </label>
+            
+                <button class="main-btn" data-copy>Copy seed phrase</button>
+            </form>
+        </div>
+    </div>
+
+</div>
