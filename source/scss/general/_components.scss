@@ -12,6 +12,16 @@
 
 @import "../components/main-components/main-top.scss";
 @import "../components/main-components/request-form.scss";
+@import "../components/main-components/main-slider.scss";
+
+
+// ----------------- CARDS COMPONENTS -----------------
+@import "../components/cards/horoscope-card.scss";
+@import "../components/cards/dream-card.scss";
+@import "../components/cards/choice-card.scss";
+@import "../components/cards/advisor-card.scss";
+@import "../components/cards/advice-card.scss";
+@import "../components/cards/advisors-link.scss";
 
 // ----------------- BLOCK COMPONENTS -----------------
 @import "../components/history-list.scss";

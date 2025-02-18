@@ -1,0 +1,65 @@
+.horoscope-card{
+    border-radius: 26px;
+    background: rgba(var(--bg-e),1.0);
+    padding: 16px 28px;
+    position: relative;
+    z-index: 1;
+    min-height: 136px;
+    overflow: hidden;
+
+    &__btns{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__btn{
+        display: flex;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: rgba(var(--cl-c),1.0);
+        text-align: center;
+        font-family: var(--third-family);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px;
+        background: transparent;
+        border-radius: 18px;
+        transition: all .3s;
+
+        &:hover{
+            background: rgba(var(--bg-c),1.0);
+        }
+
+        &.active{
+            color: rgba(var(--cl-a),1.0);
+            font-family: var(--font-family);
+            font-weight: 500;
+            background: rgba(var(--bg-d),1.0);
+
+
+            &:hover{
+                background: rgba(var(--bg-c),1.0);
+            }
+        }
+    }
+
+    &__icon{
+        display: flex;
+        width: 245px;
+        height: 192px;
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: -27px;
+
+        svg,img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}

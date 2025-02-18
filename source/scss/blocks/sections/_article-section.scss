@@ -1,0 +1,114 @@
+.article-section{
+  padding: 20px 0 20px;
+  min-height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  .container {
+    min-height: 100%;
+  }
+
+  &__title{
+    color: rgba(var(--cl-b),1.0);
+    font-family: var(--font-family);
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+  }
+
+  &__pretitle{
+    color: rgba(var(--cl-d),1.0);
+    font-family: var(--second-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.32px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: -4px;
+
+    &::before{
+      content: counter(li);
+      display: block;
+      border-radius: 50px;
+      background: rgba(var(--bg-d),1.0);
+      display: flex;
+      width: 37px;
+      height: 37px;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      color: rgba(var(--cl-c),1.0);
+      text-align: center;
+      font-family:var(--second-family);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 510;
+      line-height: 21px;
+      letter-spacing: -0.32px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100dvh - 20px);
+    grid-gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__top{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  &__text{
+    color: rgba(var(--cl-d),1.0);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  &__item{
+    counter-increment: li;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+      position: absolute;
+      bottom: calc((77px / 2) * -1);
+      left: 50%;
+      transform: translate(-50%, 50%);
+      content: '';
+      width: 27px;
+      height: 28px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(../img/sprite/moon2.svg);
+      pointer-events: none;
+    }
+  }
+
+  &__list{
+    counter-reset: li;
+    flex-direction: column;
+    display: flex;
+    gap: 77px;
+  }
+}

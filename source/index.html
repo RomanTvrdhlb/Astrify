@@ -1,40 +1,232 @@
 <!DOCTYPE html>
 <html lang="Ru">
-@include('partials/head.html')
+@include('partials/head-home.html')
 
 <body class="mode">
 
   <main>
-   <section class="miners-section">
+   <section class="main-section">
      <div class="container">
-       <div class="miners-section__box">
-        <div class="main-top">
-          <span class="main-top__title">Welcome!</span>
-          <p>You only need 3 steps to get your rewards</p>
-          <div class="main-top__image">
-            <img width='285' height='213' src='img/index/image9.png' alt='image'>
+       <div class="main-section__box">
+        <h1 class="main-section__title">Welcome to Astrify!</h1>
+       
+        <div class="main-section__wrapp">
+          <h2 class="main-section__subtitle">Daily Tarot Reading</h2>
+
+          <a href="#" class="main-section__card">
+            <svg width='101' height='137'>
+              <use href='img/sprite/sprite.svg#cards'></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="main-section__wrapp">
+          <h2 class="main-section__subtitle">Your Horoscope for Today</h2>
+
+          <div class="horoscope-card">
+            <div class="horoscope-card__btns">
+              <a href="#" class="horoscope-card__btn active">Today</a>
+              <a href="#" class="horoscope-card__btn">Tomorrow</a>
+            </div>
+            <span class="horoscope-card__icon">
+              <svg width='248' height='192'>
+                <use href='img/sprite/sprite.svg#stars'></use>
+              </svg>
+            </span>
           </div>
         </div>
-       
-        <div class="miners-section__bottom">
-            <ul class="miners-info">
-              <li class="miners-info__item">
-                <span class="miners-info__value">1</span>
-                <span class="miners-info__text">Find wallets with balance</span>
-              </li>
-              <li class="miners-info__item">
-                <span class="miners-info__value">2</span>
-                <span class="miners-info__text">Be the first
-                  to withdraw</span>
-              </li>
-              <li class="miners-info__item">
-                <span class="miners-info__value">3</span>
-                <span class="miners-info__text">Boost search speed for more</span>
-              </li>
-            </ul>
 
-            <button class="main-btn">Start wallet search</button>
+        <div class="main-section__wrapp">
+          <h2 class="main-section__subtitle">Dream Interpretation</h2>
+
+          <a href="#" class="dream-card">
+            <span class="dream-card__icon">
+              <svg width='129' height='184'>
+                <use href='img/sprite/sprite.svg#dream_сatcher'></use>
+              </svg>
+            </span>
+
+            <p>Today I had a dream about...</p>
+          </a>
         </div>
+       
+        <div class="main-section__wrapp">
+          <h2 class="main-section__subtitle">Yes or No</h2>
+
+          <a href="#" class="choice-card">
+            <span class="choice-card__icon">
+              <svg width='130' height='130'>
+                <use href='img/sprite/sprite.svg#choice'></use>
+              </svg>
+            </span>
+
+            <p>Get an answer to your burning question</p>
+          </a>
+        </div>
+
+        <div class="main-section__wrapp">
+          <h2 class="main-section__subtitle">Advisor of the Day</h2>
+          <a href="#" class="advisor-card">
+            <div class="advisor-card__image">
+              <picture>
+                <source type='image/webp' srcset='img/index/image.webp'>
+                <img width='346' height='262' src='img/index/image.png' alt='image'>
+              </picture>
+            </div>
+
+            <div class="advisor-card__bottom">
+              <span class="advisor-card__title">Sophia Brown</span>
+
+              <span class="advisor-card__rating">
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#star'></use>
+                </svg>
+
+                <b>5</b>
+              </span>
+              <span class="advisor-card__count"> 84
+            </div>
+          </a>
+        </div>
+
+        
+        <div class="main-section__wrapp">
+          <h2 class="main-section__subtitle">Top Love Life Advice Advisors</h2>
+
+         
+          <div class='main-slider'>
+            <div class='swiper-container'>
+              <ul class='swiper-wrapper'>
+                <li class='swiper-slide'>
+                  <div class="advice-card">
+                    <div class="advice-card__top">
+                      <div class="advice-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/user.webp'>
+                          <img width='86' height='90' src='img/index/user.png' alt='image'>
+                        </picture>
+                      </div>
+
+                      <span class="advice-card__rating">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#star'></use>
+                        </svg>
+
+                        <b>5</b>
+                      </span>
+                    </div>
+
+                    <span class="advice-card__title">Sophia Brown</span>
+                    <span class="advice-card__price">1$/min</span>
+
+                    <a href="#" class="main-btn">Start for free</a>
+                  </div>
+                </li>
+
+                <li class='swiper-slide'>
+                  <div class="advice-card">
+                    <div class="advice-card__top">
+                      <div class="advice-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/user2.webp'>
+                          <img width='86' height='90' src='img/index/user2.png' alt='image'>
+                        </picture>
+                      </div>
+
+                      <span class="advice-card__rating">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#star'></use>
+                        </svg>
+
+                        <b>5</b>
+                      </span>
+                    </div>
+
+                    <span class="advice-card__title">Arishka Devi</span>
+                    <span class="advice-card__price">1$/min</span>
+
+                    <a href="#" class="main-btn">Start for free</a>
+                  </div>
+                </li>
+
+                <li class='swiper-slide'>
+                  <div class="advice-card">
+                    <div class="advice-card__top">
+                      <div class="advice-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/user3.webp'>
+                          <img width='86' height='90' src='img/index/user3.png' alt='image'>
+                        </picture>
+                      </div>
+
+                      <span class="advice-card__rating">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#star'></use>
+                        </svg>
+
+                        <b>4.89</b>
+                      </span>
+                    </div>
+
+                    <span class="advice-card__title">Alex Vargas</span>
+                    <span class="advice-card__price">1$/min</span>
+
+                    <a href="#" class="main-btn">Start for free</a>
+                  </div>
+                </li>
+
+                <li class='swiper-slide'>
+                  <div class="advice-card">
+                    <div class="advice-card__top">
+                      <div class="advice-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/index/user4.webp'>
+                          <img width='86' height='90' src='img/index/user4.png' alt='image'>
+                        </picture>
+                      </div>
+
+                      <span class="advice-card__rating">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#star'></use>
+                        </svg>
+
+                        <b>4.76</b>
+                      </span>
+                    </div>
+
+                    <span class="advice-card__title">Keiko Tanaka</span>
+                    <span class="advice-card__price">1$/min</span>
+
+                    <a href="#" class="main-btn">Start for free</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+         
+        </div>
+
+
+        <div class="main-section__wrapp">
+          <h2 class="main-section__subtitle">How We Choose Our Advisors</h2>
+
+         
+          <div class="main-section__inner">
+            <div class="main-section__image">
+              <picture>
+                <source type='image/webp' srcset='img/index/photos.webp'>
+                <img width='243' height='91' src='img/index/photos.png' alt='image'>
+              </picture>
+            </div>
+
+            <p>Do you have doubts? Find out how we select our advisors</p>
+
+            <button class="main-btn">Read</button>
+          </div>
+        </div>
+       </div>
+
+       
        </div>
      </div>
    </section>
@@ -42,52 +234,38 @@
 
   <ul class="bar">
     <li class="bar__item">
-      <a href="tasks.html" class="bar__link">
-        <span class="bar__icon">
-          <svg width='24' height='24'>
+      <a href="/" class="bar__link active">
+          <svg width='30' height='30'>
             <use href='img/sprite/sprite.svg#icon1'></use>
           </svg>
-        </span>
-        Missions
       </a>
     </li>
     <li class="bar__item">
-      <a href="boost.html" class="bar__link">
-        <span class="bar__icon">
-          <svg width='24' height='24'>
+      <a href="#" class="bar__link">
+          <svg width='30' height='30'>
             <use href='img/sprite/sprite.svg#icon2'></use>
           </svg>
-        </span>
-        Boosts
       </a>
     </li>
     <li class="bar__item">
-      <a href="index.html" class="bar__link mode">
-        <span class="bar__icon">
-          <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#icon3'></use>
-          </svg>
-        </span>
+      <a href="advisors.html" class="bar__link">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon3'></use>
+        </svg>
       </a>
     </li>
     <li class="bar__item">
-      <a href="wallets.html" class="bar__link">
-        <span class="bar__icon">
-           <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#icon4'></use>
-          </svg>
-        </span>
-        My wallets
+      <a href="#" class="bar__link">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon4'></use>
+        </svg>
       </a>
     </li>
     <li class="bar__item">
-      <a href="referal.html" class="bar__link active">
-        <span class="bar__icon">
-           <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#icon5'></use>
-          </svg>
-        </span>
-        Profile
+      <a href="#" class="bar__link">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon5'></use>
+        </svg>
       </a>
     </li>
   </ul>
@@ -97,6 +275,8 @@
 
 </body>
 
+<script src="js/swiper-bundle.js"></script>
+<script src="js/swiper.js"></script>
 <script src="js/main.js"></script>
 
 </html>

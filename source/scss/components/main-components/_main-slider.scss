@@ -1,0 +1,13 @@
+.main-slider{
+    position: relative;
+    width: 100%;
+  
+    .swiper-container {
+      width: 100%;
+    }
+  
+    .swiper-slide {
+        display: flex;
+        width: 145px;
+    }
+}

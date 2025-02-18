@@ -8,7 +8,7 @@
   --body-bg: #F2F7F5;
   --body-font-size: 20px;
   --content-width: 1170px;
-  --container-offset: clamp(14px, 2.0513vw, 24px);
+  --container-offset: 22px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // --------------- default scroll variables ---------------
@@ -19,9 +19,9 @@
   // --------------- default font-family variables ---------------
   --font-family: "SF Pro Text", sans-serif; // var(--font-family);
   --second-family: "SF Pro", sans-serif; // var(--second-family);
+  --third-family: "Inter", sans-serif; // var(--third-family);
 
 
-  --third-family: "sf-pro-display", sans-serif; // var(--third-family);
   --font3: "jeko-bold", sans-serif; // var(--font3);
   --font4: "SFProText", sans-serif; // var(--font4);
   --font5: "jeko-medium", sans-serif; // var(--font5);
@@ -44,20 +44,20 @@
   --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
   --bg-c: #{HexToRGB(#00473E)}; // rgba(var(--bg-c),1.0);
   --bg-d: #{HexToRGB(#282828)}; // rgba(var(--bg-d),1.0);
+  --bg-e: #{HexToRGB(#FAAE2B)}; // rgba(var(--bg-e),1.0);
+  --bg-f: #{HexToRGB(#F2F7F5)}; // rgba(var(--bg-f),1.0);
+  --bg-g: #{HexToRGB(#F0F0F0)}; // rgba(var(--bg-g),1.0);
 
 
-  --bg-e: #{HexToRGB(#2b2f39)}; // rgba(var(--bg-e),1.0);
-  --bg-f: #{HexToRGB(#1b1d23)}; // rgba(var(--bg-f),1.0);
-  --bg-g: #{HexToRGB(#1c1f26)}; // rgba(var(--bg-g),1.0);
   --bg-h: #{HexToRGB(#14171e)}; // rgba(var(--bg-h),1.0);
   --bg-k: #{HexToRGB(#181a1f)}; // rgba(var(--bg-k),1.0);
 
   // --------------- default border color variable ---------------
   --br-a: #CCC; // var(--br-a);
+  --br-b: #FAAE2B; // var(--br-b);
+  --br-c: #D6D6D6; // var(--br-c);
 
 
-  --br-b: #393568; // var(--br-b);
-  --br-c: #34428D; // var(--br-c);
   --br-d: #05ACFF; // var(--br-d);
 
  // --------------- default gradient color variable ---------------

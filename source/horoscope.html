@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  <main>
+
+    <section class="taro-section mode">
+      <div class="container">
+        <div class="taro-section__box">
+          <div class="taro-section__icon">
+            <svg width='214' height='174'>
+              <use href='img/sprite/sprite.svg#ARIES'></use>
+            </svg>
+          </div>
+
+          <h1 class="taro-section__subtitle">ARIES </h1>
+
+          <div class="taro-section__tabs" data-tabs-parrent>
+            <ul class="taro-section__nav">
+              <li class="taro-section__item">
+                <button class="taro-section__btn active" type="button" data-tab="1">Today</button>
+              </li>
+              <li class="taro-section__item">
+                <button class="taro-section__btn" type="button" data-tab="2">Tomorrow</button>
+              </li>
+            </ul>
+            <ul class="taro-section__content">
+              <li class="taro-section__content-item active" data-tab-content="1">
+                <div class="taro-section__wrapp">
+                  <p>Today, you are in for a day full of energy and opportunities! Be ready for unexpected chances at
+                    work or in your personal life. Your intuition will guide you to the right decision, but don’t rush
+                    to conclusions. The evening is perfect for relaxation and spending time with loved ones.</p>
+
+                  <p><b>Tip of the day:</b> Act decisively, but wisely!</p>
+
+                  <a href="#" class="main-btn">Get a personal horoscope</a>
+                </div>
+              </li>
+              <li class="taro-section__content-item" data-tab-content="2">
+                <div class="taro-section__wrapp">
+                  <p>You will be full of energy and determination to achieve your goals, but you risk acting too
+                    hastily. Be cautious with financial matters - today is not the best time for major purchases. It's
+                    better to focus on completing unfinished tasks to make room for new opportunities.</p>
+
+                  <p><b>Tip of the day:</b> Focus your passion on productive tasks and avoid unnecessary conflicts.</p>
+
+                  <a href="#" class="main-btn">Get a personal horoscope</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

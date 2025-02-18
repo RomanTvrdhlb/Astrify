@@ -1,0 +1,35 @@
+.choice-card{
+    padding: 16px 28px;
+    position: relative;
+    display: flex;
+    z-index: 1;
+    min-height: 136px;
+    overflow: hidden;
+    border-radius: 26px;
+    background: rgba(var(--bg-c),1.0);
+
+    p{
+        color: rgba(var(--cl-c),1.0);
+        font-family: var(--font-family);
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+    }
+
+    &__icon{
+        display: flex;
+        width: 131px;
+        height: 130px;
+        position: absolute;
+        z-index: -1;
+        right: 7px;
+        bottom: -15px;
+
+        svg,img{
+            width: 100%;
+            height: auto;
+            fill: none;
+        }
+    }
+}

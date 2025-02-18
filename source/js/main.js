@@ -265,3 +265,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
   counter.textContent = textarea.value.length;
 });
+
+// tabs 
+
+const tabsFunction = function (
+  tabsDataInitArray,
+  tabsNavAttr,
+  tabsContentAttr,
+  active = "active"
+) {
+  tabsDataInitArray &&
+    tabsDataInitArray.forEach((tabParent) => {
+      if (tabParent) {
+        const tabNav = [...tabParent.querySelectorAll(`[${tabsNavAttr}]`)];
+        const tabContent = [
+          ...tabParent.querySelectorAll(`[${tabsContentAttr}]`),
+        ];
+
+        tabNav.map((nav) => {
+          nav.addEventListener("click", (e) => {
+            e.preventDefault();
+            const activeTabAttr = e.target.getAttribute(`${tabsNavAttr}`);
+            removeClassInArray(tabNav, active);
+            removeClassInArray(tabContent, active);
+            addCustomClass(
+              tabParent.querySelector(`[${tabsNavAttr}="${activeTabAttr}"]`),
+              active
+            );
+            addCustomClass(
+              tabParent.querySelector(
+                `[${tabsContentAttr}="${activeTabAttr}"]`
+              ),
+              active
+            );
+          });
+        });
+      }
+    });
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  tabsFunction(document.querySelectorAll("[data-tabs-parrent]"), "data-tab", "data-tab-content");
+});
+
+const slider = document.querySelector('.main-slider')
+
+if (slider) {
+  const swiper = new Swiper(slider.querySelector(".swiper-container"), {
+    spaceBetween: 8,
+    observer: true,
+    observeParents: true,
+    speed: 1000,
+    slidesPerView: 'auto',
+  });
+}

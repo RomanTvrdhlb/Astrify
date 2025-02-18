@@ -11,20 +11,20 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('sass');
 const gulpSass = require('gulp-sass');
-// const svgmin = require('gulp-svgmin');
-// const cheerio = require('gulp-cheerio');
-// const replace = require('gulp-replace');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 const fileInclude = require('gulp-file-include');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revDel = require('gulp-rev-delete-original');
-// const resolve = require('resolve');
+const resolve = require('resolve');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-imagemin');
 
-// const webpack = require('webpack');
+const webpack = require('webpack');
 
 const {readFileSync} = require('fs');
 
@@ -43,16 +43,18 @@ const ico = require('gulp-to-ico');
 // paths
 const srcFolder = './source';
 const buildFolder = './build';
+const staticFolder = './build';
+
 const paths = {
   srcSvg: `${srcFolder}/img/sprite/*.svg`,
   srcImgFolder: `${srcFolder}/img`,
-  buildImgFolder: `${buildFolder}/img`,
-  buildSpriteFolder: `${buildFolder}/img/sprite`,
+  buildImgFolder: `${staticFolder}/img`,
+  buildSpriteFolder: `${staticFolder}/img/sprite`,
   srcScss: `${srcFolder}/scss/**/*.scss`,
-  buildCssFolder: `${buildFolder}/css`,
+  buildCssFolder: `${staticFolder}/css`,
   srcFullJs: `${srcFolder}/js/**/*.js`,
   srcMainJs: `${srcFolder}/js/main.js`,
-  buildJsFolder: `${buildFolder}/js`,
+  buildJsFolder: `${staticFolder}/js`,
   srcPartialsFolder: `${srcFolder}/partials`,
   resourcesFolder: `${srcFolder}/resources`,
   faviconFolder: `${srcFolder}/favicon`,
@@ -79,13 +81,12 @@ const faviconIcon = () => {
 //svg sprite
 const svgSprites = () => {
   return src(paths.srcSvg)
-      .pipe(svgstore({
-        inlineSvg: true
-      }))
-      .pipe(rename("sprite.svg"))
-      .pipe(dest(paths.buildSpriteFolder));
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(dest(paths.buildSpriteFolder));
 }
-
 
 // scss styles
 const styles = () => {
@@ -99,7 +100,7 @@ const styles = () => {
     .pipe(mainSass())
     .pipe(autoprefixer({
       cascade: false,
-      grid: true,
+      // grid: true,
       overrideBrowserslist: ["last 5 versions"]
     }))
     .pipe(gulpif(isProd, cleanCSS({
@@ -131,58 +132,58 @@ const stylesBackend = () => {
 
 // scripts
 const scripts = () => {
-  return src(paths.srcMainJs)
-    .pipe(plumber(
-      notify.onError({
-        title: "JS",
-        message: "Error: <%= error.message %>"
-      })
-    ))
-    .pipe(webpackStream({
-      mode: isProd ? 'production' : 'development',
-      output: {
-        filename: 'main.js',
-      },
-      module: {
-        rules: [
-          {
-            test: /\.m?js$/,
-            exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: [
-                  ['@babel/preset-env', {
-                    targets: "defaults"
-                  }]
-                ]
-              }
-            }
-          },
-          {
-            type: 'javascript/auto',
-            test: /\.json$/,
-            include: /(lottie)/,
-            loader: 'lottie-web-webpack-loader',
-            options: {
-              assets: {
-                scale: 0.5
-              }
-            }
-          }
-        ]
-      },
-      devtool: !isProd ? 'source-map' : false,
-      resolve: {
-        fallback: {
-          "path": require.resolve("path-browserify")
-        }
-      }
-    }))
-    .on('error', function (err) {
-      console.error('WEBPACK ERROR', err);
-      this.emit('end');
-    })
+  return src(paths.srcFullJs)
+    // .pipe(plumber(
+    //   notify.onError({
+    //     title: "JS",
+    //     message: "Error: <%= error.message %>"
+    //   })
+    // ))
+    // .pipe(webpackStream({
+    //   mode: isProd ? 'production' : 'development',
+    //   output: {
+    //     filename: 'main.js',
+    //   },
+    //   module: {
+    //     rules: [
+    //       {
+    //         test: /\.m?js$/,
+    //         exclude: /node_modules/,
+    //         use: {
+    //           loader: 'babel-loader',
+    //           options: {
+    //             presets: [
+    //               ['@babel/preset-env', {
+    //                 targets: "defaults"
+    //               }]
+    //             ]
+    //           }
+    //         }
+    //       },
+    //       {
+    //         type: 'javascript/auto',
+    //         test: /\.json$/,
+    //         include: /(lottie)/,
+    //         loader: 'lottie-web-webpack-loader',
+    //         options: {
+    //           assets: {
+    //             scale: 0.5
+    //           }
+    //         }
+    //       }
+    //     ]
+    //   },
+    //   devtool: !isProd ? 'source-map' : false,
+    //   resolve: {
+    //     fallback: {
+    //       "path": require.resolve("path-browserify")
+    //     }
+    //   } 
+    // }))
+    // .on('error', function (err) {
+    //   console.error('WEBPACK ERROR', err);
+    //   this.emit('end');
+    // })
     .pipe(dest(paths.buildJsFolder))
     .pipe(browserSync.stream());
 }
@@ -222,7 +223,7 @@ const scriptsBackend = () => {
         fallback: {
           "path": require.resolve("path-browserify")
         }
-      }
+      } 
     }))
     .on('error', function (err) {
       console.error('WEBPACK ERROR', err);
@@ -236,19 +237,19 @@ const resources = () => {
   return src([
     `${paths.resourcesFolder}/**/*`
   ])
-    .pipe(dest(buildFolder))
+    .pipe(dest(staticFolder))
 }
 
 const images = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif,ico}`])
     .pipe(gulpif(isProd, image([
-      // image.mozjpeg({
-      //   quality: 80,
-      //   progressive: true
-      // }),
-      // image.optipng({
-      //   optimizationLevel: 2
-      // }),
+      image.mozjpeg({
+        quality: 80,
+        progressive: true
+      }),
+      image.optipng({
+        optimizationLevel: 2
+      }),
     ])))
     .pipe(dest(paths.buildImgFolder))
 };
@@ -293,7 +294,7 @@ const watchFiles = () => {
   watch(`${paths.srcPartialsFolder}/**/*.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif}`, images);
+  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
   watch(`${paths.srcImgFolder}/**/**.{webm,mp4,MPEG-4}`, video);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   watch(paths.srcSvg, svgSprites);
