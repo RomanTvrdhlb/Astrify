@@ -308,14 +308,51 @@ document.addEventListener("DOMContentLoaded", function () {
   tabsFunction(document.querySelectorAll("[data-tabs-parrent]"), "data-tab", "data-tab-content");
 });
 
-const slider = document.querySelector('.main-slider')
+// slider 
 
-if (slider) {
-  const swiper = new Swiper(slider.querySelector(".swiper-container"), {
-    spaceBetween: 8,
-    observer: true,
-    observeParents: true,
-    speed: 1000,
-    slidesPerView: 'auto',
-  });
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector('.main-slider')
+
+  if (slider) {
+    const swiper = new Swiper(slider.querySelector(".swiper-container"), {
+      spaceBetween: 8,
+      observer: true,
+      observeParents: true,
+      speed: 1000,
+      slidesPerView: 'auto',
+    });
+  }
+});
+
+// chat-area
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textarea = document.querySelector(".chat-bar__area");
+
+  if (textarea) {
+    const lineHeight = parseInt(getComputedStyle(textarea).lineHeight, 10); // Получаем высоту одной строки
+    const maxSingleLineHeight = lineHeight * 1.5; // Условная высота до второй строки
+
+    textarea.addEventListener("input", () => {
+      if (textarea.scrollHeight > maxSingleLineHeight) {
+        textarea.style.maxHeight = "none"; // Убираем ограничение
+        textarea.style.height = "auto"; // Сбрасываем текущую высоту
+        textarea.style.height = `${textarea.scrollHeight}px`; // Устанавливаем высоту по содержимому
+      }
+    });
+  }
+});
+
+// translator
+document.addEventListener("DOMContentLoaded", function () {
+  const translateMenu = document.querySelector('.translator');
+  const translateBtn = document.querySelector('[data-translate-btn]');
+
+  if(translateBtn && translateMenu){
+    translateBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      translateBtn.classList.toggle('active');
+      translateMenu.classList.toggle('active');
+    })
+  }
+});

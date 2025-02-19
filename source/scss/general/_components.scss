@@ -13,6 +13,7 @@
 @import "../components/main-components/main-top.scss";
 @import "../components/main-components/request-form.scss";
 @import "../components/main-components/main-slider.scss";
+@import "../components/main-components/settings.scss";
 
 
 // ----------------- CARDS COMPONENTS -----------------
@@ -22,6 +23,8 @@
 @import "../components/cards/advisor-card.scss";
 @import "../components/cards/advice-card.scss";
 @import "../components/cards/advisors-link.scss";
+@import "../components/cards/chat-mess.scss";
+@import "../components/cards/notifications-card.scss";
 
 // ----------------- BLOCK COMPONENTS -----------------
 @import "../components/history-list.scss";

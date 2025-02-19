@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head-home.html')
+
+<body>
+
+  <main>
+   <section class="notifications-section">
+     <div class="container">
+        <div class="notifications-section__box">
+          <h1 class="notifications-section__title">Notifications</h1>
+
+          
+          <ul class="notifications-section__list">
+            <li class="notifications-section__item">
+              <div class="notifications-card">
+                  <div class="notifications-card__avatar">
+                    <picture>
+                      <source type='image/webp' srcset='img/index/Avatar2.webp'>
+                      <img width='56' height='56' src='img/index/Avatar2.png' alt='image'>
+                    </picture>
+                  </div> 
+
+                  <span class="notifications-card__name">Sophia Brown</span>
+
+                  <p>Psychic Reader, Dream Interpreter</p>
+
+                  <div class="notifications-card__date">
+                    <p>It`s time to start your session!</p>
+                  </div>
+
+                  <button class="main-btn">Start now</button>
+              </div>
+            </li>
+
+            <li class="notifications-section__item">
+              <div class="notifications-card">
+                  <div class="notifications-card__avatar">
+                    <picture>
+                      <source type='image/webp' srcset='img/index/Avatar3.webp'>
+                      <img width='56' height='56' src='img/index/Avatar3.png' alt='image'>
+                    </picture>
+                  </div>
+
+                  <span class="notifications-card__name">Sophia Brown</span>
+
+                  <p>Psychic Reader, Dream Interpreter</p>
+
+                  <div class="notifications-card__date">
+                    <span><b>1:00</b> pm</span>
+                    <span>Wed 28 June</span>
+                  </div>
+
+                  <button class="main-btn">Cancel</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+       </div>
+     </div>
+   </section>
+  </main>
+
+  <ul class="bar">
+    <li class="bar__item">
+      <a href="/" class="bar__link">
+          <svg width='30' height='30'>
+            <use href='img/sprite/sprite.svg#icon1'></use>
+          </svg>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="#" class="bar__link">
+          <svg width='30' height='30'>
+            <use href='img/sprite/sprite.svg#icon2'></use>
+          </svg>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="advisors.html" class="bar__link">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon3'></use>
+        </svg>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="#" class="bar__link active">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon4'></use>
+        </svg>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="#" class="bar__link">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon5'></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

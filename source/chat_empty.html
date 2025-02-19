@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head-home.html')
+
+<body>
+
+  <main>
+   <section class="chat-section">
+     <div class="container">
+        <div class="chat-section__box">
+          <h1 class="chat-section__title">Chat</h1>
+
+          <div class="chat-section__wrapp">
+            <p>It feels like you haven’t sent any messages yet.</p>
+            <a href="#" class="main-btn">Choose Your Advisor</a>
+          </div>
+        </div>
+       </div>
+     </div>
+   </section>
+  </main>
+
+  <ul class="bar">
+    <li class="bar__item">
+      <a href="/" class="bar__link">
+          <svg width='30' height='30'>
+            <use href='img/sprite/sprite.svg#icon1'></use>
+          </svg>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="#" class="bar__link active">
+          <svg width='30' height='30'>
+            <use href='img/sprite/sprite.svg#icon2'></use>
+          </svg>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="advisors.html" class="bar__link">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon3'></use>
+        </svg>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="#" class="bar__link">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon4'></use>
+        </svg>
+      </a>
+    </li>
+    <li class="bar__item">
+      <a href="#" class="bar__link">
+        <svg width='30' height='30'>
+          <use href='img/sprite/sprite.svg#icon5'></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

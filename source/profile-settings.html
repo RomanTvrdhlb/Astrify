@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head-home.html')
+
+<body>
+
+  <main>
+    <section class="settings-section mode">
+      <div class="container">
+        <div class="settings-section__box">
+          <h1 class="settings-section__title">Edit Profile</h1>
+
+          <form class="settings-section__form">
+            <div class="settings-section__inner">
+              <div class="settings-section__image mode">
+                <picture>
+                  <source type='image/webp' srcset='img/sprite/Vector.webp'>
+                  <img width='100' height='100' src='img/sprite/Vector.png' alt='image'>
+                </picture>
+              </div>
+              <button class="settings-section__add">Add photo</button>
+            </div>
+
+           
+
+            <ul class="settings-section__list">
+              <li class="settings-section__item">
+                <label class="edit-profile">
+                  <span class="edit-profile__text">Name</span>
+                  <input disabled class="edit-profile__input" type="text" name="name" id="name" value="Jenny">
+
+                  <button class="edit-profile__btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#lucide_pen'></use>
+                    </svg>
+                  </button>
+                </label>
+              </li>
+
+              <li class="settings-section__item">
+                <label class="edit-profile">
+                  <span class="edit-profile__text">Date of birth</span>
+                  <input disabled class="edit-profile__input" type="text" name="name" id="name" value="03/12/1992">
+
+                  <button class="edit-profile__btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#lucide_pen'></use>
+                    </svg>
+                  </button>
+                </label>
+              </li>
+
+              <li class="settings-section__item">
+                <label class="edit-profile">
+                  <span class="edit-profile__text">Time of birth</span>
+                  <input disabled class="edit-profile__input" type="text" name="name" id="name" value="08:32 a.m.">
+
+                  <button class="edit-profile__btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#lucide_pen'></use>
+                    </svg>
+                  </button>
+                </label>
+              </li>
+            </ul>
+
+            <button class="delete-link">
+              <span class="delete-link__icon">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#Close_Circle'></use>
+                </svg>
+              </span>
+              Delete profile
+            </button>
+          </form>
+
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head-home.html')
+
+<body>
+
+  <main>
+   <section class="chat-section mode">
+     <div class="container">
+        <div class="chat-section__box">
+          <div class="chat-section__top">
+            <div class="chat-section__avatar active">
+              <picture>
+                <source type='image/webp' srcset='img/index/Avatar2.webp'>
+                <img width='50' height='50' src='img/index/Avatar2.png' alt='image'>
+              </picture>
+            </div>
+            <span class="chat-section__name">Psychic Harry</span>
+            <span class="chat-section__status">Active now</span>
+          </div>
+
+          <span class="chat-section__date">Yesterday <b>9:41</b></span>
+
+          <ul class="chat-section__list">
+            <li class="chat-section__item">
+              <div class="message">
+                <p>Let’s get lunch soon! When are you free? 🤗</p>
+              </div>
+              <span class="chat-section__time">Read <b>10:02</b></span>
+            </li>
+            <li class="chat-section__item mode">
+              <div class="message">
+                <p>Let’s get lunch soon! When are you free? 🤗</p>
+              </div>
+              <span class="chat-section__time">Read <b>10:06</b></span>
+            </li>
+            <li class="chat-section__item">
+              <div class="message">
+                <p>Let’s get lunch soon! When are you free? 🤗</p>
+              </div>
+              <span class="chat-section__time">Read <b>10:02</b></span>
+            </li>
+            <li class="chat-section__item">
+              <div class="message">
+                <p>Let’s get lunch soon! When are you free? 🤗</p>
+              </div>
+              <span class="chat-section__time">Read <b>10:02</b></span>
+            </li>
+            <li class="chat-section__item mode">
+              <div class="message">
+                <p>Let’s get lunch soon! When are you free? 🤗</p>
+              </div>
+              <span class="chat-section__time">Read <b>10:06</b></span>
+            </li>
+          </ul>
+
+        </div>
+       </div>
+     </div>
+   </section>
+  </main>
+
+  <form class="chat-bar">
+    <button class="chat-bar__btn">
+      <svg width='38' height='28'>
+        <use href='img/sprite/sprite.svg#Actions'></use>
+      </svg>
+    </button>
+
+    <label for="mess" class="chat-bar__label">
+      <textarea name="mess" id="mess" class="chat-bar__area" placeholder="Message"></textarea>
+
+      <button class="chat-bar__send">
+        <svg width='12' height='14'>
+          <use href='img/sprite/sprite.svg#arrow'></use>
+        </svg>
+      </button>
+    </label>
+  </form>
+
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>
