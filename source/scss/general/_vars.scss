@@ -17,14 +17,13 @@
   --scrollbar-track-hover: transparent;
 
   // --------------- default font-family variables ---------------
-  --font-family: "SF Pro Text", sans-serif; // var(--font-family);
-  --second-family: "SF Pro", sans-serif; // var(--second-family);
+  --font-family: "SF-Pro-Text", sans-serif; // var(--font-family);
+  --second-family: "SF-Pro", sans-serif; // var(--second-family);
   --third-family: "Inter", sans-serif; // var(--third-family);
+  --font3: "Alegreya", sans-serif; // var(--font3);
+  --font4: "Lato", sans-serif; // var(--font4);
+  --font5: "SF-Pro-Display", sans-serif; // var(--font5);
 
-
-  --font3: "jeko-bold", sans-serif; // var(--font3);
-  --font4: "SFProText", sans-serif; // var(--font4);
-  --font5: "jeko-medium", sans-serif; // var(--font5);
   
   // --------------- default text color variables ---------------
   --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
@@ -37,6 +36,8 @@
   --cl-h: #{HexToRGB(#9C9CA3)}; // rgba(var(--cl-h),1.0);
   --cl-i: #{HexToRGB(#FF6262)}; // rgba(var(--cl-i),1.0);
   --cl-k: #{HexToRGB(#FA0)}; // rgba(var(--cl-k),1.0);
+  --cl-l: #{HexToRGB(#00473E)}; // rgba(var(--cl-l),1.0);
+  --cl-m: #{HexToRGB(#1E1F2E)}; // rgba(var(--cl-m),1.0);
 
   // --------------- default background color variables ----------
   --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);

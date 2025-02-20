@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head-home.html')
+
+<body class="mode">
+
+  <main>
+    <section class="profile-section">
+      <div class="container">
+        <div class="profile-section__box">
+          <div class="profile-section__top">
+            <div class="profile-section__image">
+              <picture>
+                <source type='image/webp' srcset='img/index/user11.webp'>
+                <img width='390' height='282' src='img/index/user11.png' alt='image'>
+              </picture>
+            </div>
+
+            <span class="profile-section__label">Online</span>
+          </div>
+
+          <div class="profile-section__content">
+            <div class="profile-section__wrapp">
+              <div class="profile-section__info">
+                <h1 class="profile-section__title">Sophia Brown</h1>
+
+                <p>Psychic Reader, Dream Interpreter</p>
+
+                <span class="profile-section__lang">English</span>
+
+                <div class="rating">
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star"></span>
+                  <span class="rating__star fill"></span>
+                  <span class="rating__count">(5.0)</span>
+
+                  <b>84</b>
+                </div>
+
+                <span class="profile-section__price">$<b>1</b>/min</span>
+              </div>
+
+              <p>I am Sophia Brown, a gifted prophet deeply connected to the spiritual realm. I offer personalized
+                readings and guidance to help you overcome life's challenges, whether through intuitive insights or
+                spiritual guidance. With my expertise, I empower you to make clear decisions and invite positive energy
+                into every area of your life.</p>
+
+              <ul class="info-list">
+                <li class="info-list__item">
+                  <span class="info-list__value">10</span>
+                  <p>Years
+                    Experience</p>
+                </li>
+                <li class="info-list__item">
+                  <span class="info-list__value">5,000+</span>
+                  <p>Satisfied
+                    Clients</p>
+                </li>
+                <li class="info-list__item">
+                  <span class="info-list__value">84</span>
+                  <p>Positive
+                    Reviews</p>
+                </li>
+              </ul>
+
+              <ul class="labels-list" data-title="Top 3 Requests">
+                <li class="labels-list__item">
+                  <a href="#" class="labels-list__link">Resolving Relationship Issues</a>
+                </li>
+                <li class="labels-list__item">
+                  <a href="#" class="labels-list__link">Finding your soulmate</a>
+                </li>
+                <li class="labels-list__item">
+                  <a href="#" class="labels-list__link">Career Change</a>
+                </li>
+              </ul>
+
+              <ul class="labels-list white" data-title="Topics">
+                <li class="labels-list__item">
+                  <a href="#" class="labels-list__link">Love & Relationships</a>
+                </li>
+                <li class="labels-list__item">
+                  <a href="#" class="labels-list__link">Life Questions</a>
+                </li>
+                <li class="labels-list__item">
+                  <a href="#" class="labels-list__link">Predictions</a>
+                </li>
+                <li class="labels-list__item">
+                  <a href="#" class="labels-list__link">Career & Life Purpose</a>
+                </li>
+              </ul>
+
+              <ul class="profile-section__reviews" data-title="reviews">
+                <li class="profile-section__item">
+                  <div class="review">
+                    <span class="review__name">Cynthia</span>
+                    <span class="review__date">7/11/25</span>
+                    <div class="rating">
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star fill"></span>
+                    </div>
+
+                    <p>Sophia is absolutely amazing - her readings are spot-on, her energy is so comforting, and talking
+                      to her feels like pure magic!</p>
+                  </div>
+                </li>
+                <li class="profile-section__item">
+                  <div class="review">
+                    <span class="review__name">Gabriel</span>
+                    <span class="review__date">7/11/25</span>
+                    <div class="rating">
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="profile-section__bottom">
+            <button class="second-btn">Start for free</button>
+            <button class="second-btn second-btn--transparent">Start for free</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

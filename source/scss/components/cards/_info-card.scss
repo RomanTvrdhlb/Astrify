@@ -1,0 +1,110 @@
+.info-card{
+    display: flex;
+    gap: 18px;
+
+    &__image{
+        width: 126px;
+        height: 162px;
+        overflow: hidden;
+
+        img,picture{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 1;
+        height: fit-content;
+    }
+
+    &__rating{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        padding: 4px 11px 3px;
+        border-radius: 13px;
+        width: fit-content;
+        background: rgba(var(--bg-f),1.0);
+        box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.15);
+        color: rgba(var(--cl-d),1.0);
+        font-family: var(--third-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        svg{
+            width: 20px;
+            height: 20px;
+
+            margin-top: -2px;
+        }
+    }
+
+    &__title{
+        color: rgba(var(--cl-d),1.0);
+        font-family:  var(--font-family);
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+        margin-bottom: 7px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: rgba(var(--cl-d),1.0);
+        font-family:  var(--font-family);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+    }
+
+    &__icon{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        flex-shrink: 0;
+
+        svg{
+            fill: none;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__price{
+        color: rgba(var(--cl-d),1.0);
+        font-family:  var(--font-family);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+
+        b{
+            font-weight: 400;
+        }
+    }
+}

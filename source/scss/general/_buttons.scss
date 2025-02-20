@@ -70,6 +70,42 @@
   }
 }
 
+.second-btn{
+  display: inline-flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 18px;
+  background: rgba(var(--bg-e),1.0);
+  color: rgba(var(--cl-c),1.0);
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  border: solid 1px  transparent;
+  transition: all .3s;
+
+  &:hover{
+    border-color: rgba(var(--bg-e),1.0);
+    background: transparent;
+    color:  rgba(var(--bg-e),1.0);
+  }
+
+  &--transparent{
+    border-color: rgba(var(--bg-e),1.0);
+    background: transparent;
+    color:  rgba(var(--bg-e),1.0);
+
+    &:hover{
+      background: rgba(var(--bg-e),1.0);
+      color: rgba(var(--cl-c),1.0);
+    }
+  }
+}
+
 //not use
 
 .copy-btn {

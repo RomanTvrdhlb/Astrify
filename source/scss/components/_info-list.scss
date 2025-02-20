@@ -1,0 +1,35 @@
+.info-list{
+    display: flex;
+    align-items: center;
+    gap: 37px;
+    align-self: stretch;
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        flex: 1 0 0;
+
+        p{
+            color: rgba(var(--cl-c),1.0);
+            text-align: center;
+            font-family: var(--font-family);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+        }
+    }
+
+    &__value{
+        align-self: stretch;
+        color: rgba(var(--cl-c),1.0);
+        text-align: center;
+        font-family: var(--font-family);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+    }
+}

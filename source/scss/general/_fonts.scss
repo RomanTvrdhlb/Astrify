@@ -10,22 +10,27 @@
   }
 }
 
-@include font-face("sf-pro-display",  "sf-pro-display", 400, normal);
-@include font-face("sf-pro-display",  "sf-pro-display-bold", 700, normal);
-@include font-face("sf-pro-display",  "sf-pro-display-medium", 500, normal);
+@include font-face("SF-Pro-Text",  "SFProText-Regular", 400, normal);
+@include font-face("SF-Pro-Text",  "SFProText-Medium", 500, normal);
+@include font-face("SF-Pro-Text",  "sf-pro-text-semibold", 600, normal);
+@include font-face("SF-Pro-Text",  "SFProText-Bold", 700, normal);
+@include font-face("SF-Pro-Text",  "SFProText-Heavy", 900, normal);
 
-@include font-face("jeko-medium",  "Jeko-Medium", 500, normal);
-@include font-face("jeko-bold",  "jeko-bold", 700, normal);
+@include font-face("SF-Pro-Display",  "sf-pro-display-regular", 400, normal);
+@include font-face("SF-Pro-Display",  "sf-pro-display-bold", 700, normal);
+@include font-face("SF-Pro-Display",  "sf-pro-display-medium", 500, normal);
 
-@include font-face("Commissioner",  "Commissioner-SemiBold", 600, normal);
-@include font-face("Commissioner",  "Commissioner-Regular", 400, normal);
-@include font-face("Commissioner",  "Commissioner-Medium", 500, normal);
-@include font-face("Commissioner",  "Commissioner-Bold", 700, normal);
+@include font-face("SF-Pro",  "Sf-pro", 400, normal);
+@include font-face("SF-Pro",  "Sf-pro", 500, normal);
+@include font-face("SF-Pro",  "Sf-pro", 600, normal);
 
-@include font-face("SFProText",  "sf-pro-text-semibold", 600, normal);
+@include font-face("Inter",  "Inter-Regular", 400, normal);
+@include font-face("Inter",  "Inter-Medium", 500, normal);
+@include font-face("Inter",  "Inter-Bold", 700, normal);
 
-@include font-face("Source-Code-Pro",  "Source-Code-Pro-Regular", 400, normal);
-@include font-face("Source-Code-Pro",  "Source-Code-Pro-Semibold", 700, normal);
+@include font-face("Lato",  "Lato-Medium", 500, normal);
+
+@include font-face("Alegreya",  "Alegreya-Medium", 500, normal);
 
 // 100 – Thin || Hairline
 // 200 – Extra Light || Ultra Light || Thin

@@ -1,0 +1,38 @@
+.review{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px;
+    width: 100%;
+    padding: 14px 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    border: 1px solid rgba(var(--cl-a),1.0);
+
+    &__date{
+        color: rgba(var(--cl-c),1.0);
+        text-align: right;
+        font-family: var(--font-family);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__name{
+        color: rgba(var(--cl-c),1.0);
+        font-family: var(--font-family);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .rating{
+        grid-column: 1/-1;
+    }
+
+    p{
+        grid-column: 1/-1;
+    }
+}
