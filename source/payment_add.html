@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head-home.html')
+
+<body>
+
+  <main>
+    <section class="settings-section mode">
+      <div class="container">
+        <div class="settings-section__box">
+          <h1 class="settings-section__title mode">Add credit or debit card</h1>
+          <p>Your payment details are stored securely.<br> By adding a card, you won’t be charged yet.</p>
+
+          <form class="payment-form payment-form--add">
+            <label for="cardNumber" class="payment-form__label">
+              <span class="payment-form__name">Card number</span>
+              <input type="text" maxlength="19" inputmode="numeric" class="payment-form__input" name="cardNumber" id="cardNumber" placeholder="xxxx xxxx xxxx xxxx">
+            </label>
+
+            <label for="expireDate" class="payment-form__label">
+              <span class="payment-form__name">Expire date</span>
+              <input type="text" maxlength="7" inputmode="numeric" class="payment-form__input" name="expireDate" id="expireDate" placeholder=" MM/YYYY">
+            </label>
+
+            <label for="cvv" class="payment-form__label">
+              <span class="payment-form__name">CVV</span>
+              <input type="text" maxlength="3" inputmode="numeric" class="payment-form__input" name="cvv" id="cvv" placeholder="CVV">
+            </label>
+
+
+            <label class="custom-checkbox">
+              <input type="checkbox" checked name="card" class="custom-checkbox__field">
+              <span class="custom-checkbox__content">
+                Save Details
+              </span>
+            </label>
+
+            <button class="main-btn main-btn--mode" type="submit" data-open-modal="session">Save</button>
+          </form>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

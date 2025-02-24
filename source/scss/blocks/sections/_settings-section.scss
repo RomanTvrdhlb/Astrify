@@ -17,6 +17,17 @@
     font-weight: 600;
     text-align: center;
     line-height: 95.455%;
+
+    &.mode{
+      font-size: 20px;
+      text-align: start;
+      margin-bottom: -2px;
+
+      & + p{
+        margin-top: -12px;
+        color: rgba(var(--cl-f),1.0);
+      }
+    }
   }
 
   &__box {

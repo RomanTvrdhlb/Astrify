@@ -134,3 +134,156 @@
     }
   }
 }
+
+.pagination{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  width: fit-content;
+  align-self: center;
+
+  &__item{
+    display: flex;
+  }
+
+  &__bullet{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: solid 1px var(--br-a);
+    transition: all .3s;
+
+    &.active{
+      pointer-events: none;
+      background: rgba(var(--bg-e),1.0);
+    }
+  }
+}
+
+
+.start-loader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s;
+  pointer-events: none;
+  background: linear-gradient(180deg, #121A19 0%, #121A18 100%);
+  
+  &.loaded{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__image{
+    margin-bottom: 19px;
+    width: 304px;
+    height: 297px;
+    display: flex;
+
+    img,picture{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__icon{
+    margin-right: -15px;
+    width: 48px;
+    height: 48px;
+    transform: scale(1.1);
+  }
+
+  &__title{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #D5BA80;
+  }
+
+  p{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: rgba(var(--cl-f),1.0);
+    margin-bottom: 50px;
+  }
+}
+
+.loader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s;
+  pointer-events: none;
+  background: rgba(var(--bg-f),1.0);
+  opacity: 0;
+  visibility: hidden;
+
+  &.show{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__icon{
+    width: 42px;
+    height: 42px;
+  }
+
+  &__text{
+    font-family: var(--font-family);
+    color:  rgba(var(--bg-d),1.0);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 510;
+    line-height: 21px;
+    letter-spacing: -0.32px;
+    text-transform: uppercase;
+  }
+
+  p{
+    font-family: var(--font-family);
+    color:  rgba(var(--bg-d),1.0);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 510;
+    line-height: 21px;
+    letter-spacing: -0.32px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    max-width: 203px;
+  }
+
+  &.loaded{
+    opacity: 0;
+    visibility: hidden;
+  }
+}

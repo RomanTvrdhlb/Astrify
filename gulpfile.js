@@ -261,7 +261,7 @@ const video = () => {
 };
 
 const webpImages = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
+  return src([`${paths.srcImgFolder}/**/**.{gif,jpg,jpeg,png}`])
     .pipe(webp())
     .pipe(dest(paths.buildImgFolder))
 };
@@ -294,14 +294,14 @@ const watchFiles = () => {
   watch(`${paths.srcPartialsFolder}/**/*.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
+  watch(`${paths.srcImgFolder}/**/**.{gif,jpg,jpeg,png,svg}`, images);
   watch(`${paths.srcImgFolder}/**/**.{webm,mp4,MPEG-4}`, video);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
+  watch(`${paths.srcImgFolder}/**/**.{gif,jpg,jpeg,png}`, webpImages);
   watch(paths.srcSvg, svgSprites);
 }
 
 const cache = () => {
-  return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2, pdf,woff,webm, mp4}`, {
+  return src(`${buildFolder}/**/*.{gif,css,js,svg,png,jpg,jpeg,webp,woff2, pdf,woff,webm, mp4}`, {
       base: buildFolder
     })
     .pipe(rev())

@@ -8,6 +8,7 @@
     box-shadow: 0px 1px 12.1px 0px #CCC;
     display: grid;
     grid-template-columns: repeat(2, auto) 1fr auto;
+    width: 100%;
 
     &::before{
         display: block;

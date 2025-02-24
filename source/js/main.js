@@ -108,35 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const adressForms = document.querySelectorAll("[data-parent-adress]");
-
-  adressForms &&
-  adressForms.forEach(function (adressForm) {
-      const copyButton = adressForm.querySelector("[data-copy]");
-      const input = adressForm.querySelector("[data-value]");
-      const value = adressForm.querySelector(".adress-form__value.copy");
-      const originalValue = input.value;
-
-      const handleCopy = async (e) => {
-        e.preventDefault();
-        if (input.value === originalValue) {
-          try {
-            await navigator.clipboard.writeText(input.value);
-            addCustomClass(value, 'active');
-            copyButton.innerHTML = "Success";
-            copyButton.style.color = "rgb(42 233 42)";
-            copyButton.style.fontWeight = "500";
-          } catch (err) {
-            console.error("Failed to copy: ", err);
-          }
-        }
-      };
-
-      copyButton.addEventListener("click", handleCopy);
-      value.addEventListener("click", handleCopy);
-    });
-});
 
 //-------------------modals----------------------------
 
@@ -191,7 +162,7 @@ function buttonClickHandler(e, buttonAttribute, activeClass) {
 }
 
 function overlayClickHandler(e, activeClass) {
-  if (e.target === overlay || e.target === innerButton) commonFunction();
+  if (e.target === overlay || e.target === innerButton || e.target === document.querySelector('.overlay__bg')) commonFunction();
 }
 
 function modalInit(buttonsArray, buttonAttribute, activeClass) {
@@ -229,9 +200,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
           `[data-popup="${currentModalId}"]`
         );
 
-        removeClassInArray(modals, activeClass);
-        addCustomClass(overlay, activeClass);
-        fadeOut(document.querySelector(`[data-popup="${prevId}"]`), 0);
+        const isProfileModal = currentModal.classList.contains('profile-modal');
+    
+        if (isProfileModal) {
+          removeClassInArray(modals, activeClass);
+          fadeOut(document.querySelector(`[data-popup="${prevId}"]`), 0);
+        } else {
+          addCustomClass(overlay, 'mode');
+        }
+      
         fadeIn(currentModal, 200);
         addCustomClass(currentModal, activeClass);
         disableScroll();
@@ -243,6 +220,54 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 });
 
+// loader-modal
+function initCustomModalLoader(buttonAttribute, loaderClass, activeClass) {
+  const customButtons = document.querySelectorAll(`[${buttonAttribute}]`);
+  const loader = document.querySelector(loaderClass);
+
+  customButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const modalId = findAttribute(e.target, buttonAttribute);
+      if (!modalId) return;
+
+      loader && addCustomClass(loader, 'show');
+
+      setTimeout(() => {
+        loader && removeCustomClass(loader, 'show');
+        
+        const targetModal = overlay.querySelector(`[data-popup="${modalId}"]`);
+        
+        if (targetModal) {
+          removeClassInArray(modals, activeClass);
+          addCustomClass(overlay, activeClass);
+          addCustomClass(overlay, activeMode);
+          addCustomClass(targetModal, activeClass);
+          fadeIn(targetModal, 200, "flex");
+          disableScroll();
+          innerButton = overlay.querySelector(`${"[data-popup]"}.${activeClass} .close`);
+        }
+      }, 2000);
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initCustomModalLoader('data-open-modal', '.loader', activeClass);
+});
+
+// loader
+const loader = document.querySelector('.start-loader');
+
+if(loader){
+  document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function(){
+          addCustomClass(loader, 'loaded');
+          window.loaderLoaded = true;
+      },2500)
+  });
+}
 
 //request-form
 document.addEventListener("DOMContentLoaded", () => {
@@ -330,14 +355,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const textarea = document.querySelector(".chat-bar__area");
 
   if (textarea) {
-    const lineHeight = parseInt(getComputedStyle(textarea).lineHeight, 10); // Получаем высоту одной строки
-    const maxSingleLineHeight = lineHeight * 1.5; // Условная высота до второй строки
+    const lineHeight = parseInt(getComputedStyle(textarea).lineHeight, 10);
+    const maxSingleLineHeight = lineHeight * 1.5;
 
     textarea.addEventListener("input", () => {
       if (textarea.scrollHeight > maxSingleLineHeight) {
-        textarea.style.maxHeight = "none"; // Убираем ограничение
-        textarea.style.height = "auto"; // Сбрасываем текущую высоту
-        textarea.style.height = `${textarea.scrollHeight}px`; // Устанавливаем высоту по содержимому
+        textarea.style.maxHeight = "none"; 
+        textarea.style.height = "auto"; 
+        textarea.style.height = `${textarea.scrollHeight}px`; 
       }
     });
   }
@@ -356,3 +381,74 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   }
 });
+
+// format inputs
+document.addEventListener("DOMContentLoaded", function () {
+  const cardNumberInput = document.getElementById("cardNumber");
+  const expireDateInput = document.getElementById("expireDate");
+
+  if(cardNumberInput){
+    cardNumberInput.addEventListener("input", function (e) {
+      let value = e.target.value.replace(/\D/g, "");
+      value = value.replace(/(\d{4})/g, "$1 ").trim();
+      e.target.value = value;
+    });
+  }
+  if(expireDateInput){
+    expireDateInput.addEventListener("input", function (e) {
+      let value = e.target.value.replace(/\D/g, "");
+
+      if (value.length > 2) {
+        value = value.slice(0, 2) + "/" + value.slice(2, 6);
+      }
+      
+      e.target.value = value;
+    });
+  }
+});
+
+// pagination
+document.addEventListener("DOMContentLoaded", function () {
+  const list = document.querySelector(".modal__list");
+  const bullets = document.querySelectorAll(".pagination__bullet");
+
+  const itemWidth = 153;
+  const gap = 10;
+  const itemFullWidth = itemWidth + gap;
+
+  function updatePagination() {
+      let scrollLeft = list.scrollLeft;
+      let maxScrollLeft = list.scrollWidth - list.clientWidth;
+      let index = maxScrollLeft === 0 ? 0 : Math.round((scrollLeft / maxScrollLeft) * (bullets.length - 1));
+
+      bullets.forEach((bullet, i) => {
+          bullet.classList.toggle("active", i === index);
+      });
+  }
+
+  function smoothScrollTo(position) {
+      list.scrollTo({
+          left: position,
+          behavior: "smooth"
+      });
+  }
+
+  bullets.forEach((bullet, index) => {
+      bullet.addEventListener("click", () => {
+          let maxScrollLeft = list.scrollWidth - list.clientWidth;
+
+          if (index === 0) {
+              smoothScrollTo(0);
+          } else if (index === 1) {
+              smoothScrollTo(maxScrollLeft / 2);
+          } else if (index === 2) {
+              smoothScrollTo(maxScrollLeft);
+          }
+      });
+  });
+
+  list.addEventListener("scroll", updatePagination);
+
+  setTimeout(updatePagination, 0);
+});
+

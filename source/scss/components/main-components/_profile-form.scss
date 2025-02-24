@@ -54,13 +54,18 @@
     &__label{
         position: relative;
         z-index: 1;
+
+        border-radius: 26px;
+        border: 1px solid rgba(var(--bg-e),1.0);
+        background: transparent;
+        padding-right: 10px;
+        margin-bottom: 8px;
     }
 
     &__area{
-        margin-bottom: 8px;
-        border-color: rgba(var(--bg-e),1.0);
-
+        border-color: transparent;
         overflow: auto;
+        padding-right: 10px;
 
         &::-webkit-scrollbar {
             width: 5px;

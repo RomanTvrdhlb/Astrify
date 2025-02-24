@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head-home.html')
+
+<body>
+
+  <main>
+    <section class="settings-section mode">
+      <div class="container">
+        <div class="settings-section__box">
+          <h1 class="settings-section__title mode">Payment Methods</h1>
+
+          <form class="payment-form">
+            <p>Credit & Debit Card</p>
+
+            <label class="payment-checkbox">
+              <input type="radio" checked name="card" class="payment-checkbox__field">
+              <span class="payment-checkbox__content">
+                <img width="26" height="26" src="./img/sprite/Card.svg" alt="icon">
+
+                xxxx xxxx xxxx 3457
+              </span>
+            </label>
+
+            <label class="payment-checkbox">
+              <input type="radio" name="card" class="payment-checkbox__field">
+              <span class="payment-checkbox__content">
+                <img width="26" height="26" src="./img/sprite/Card.svg" alt="icon">
+
+                Add new card
+              </span>
+            </label>
+
+            <button class="main-btn" type="submit"  data-open-modal="payment_add">Сontinue</button>
+          </form>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/modals.html')
+
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

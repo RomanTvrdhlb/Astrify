@@ -1,19 +1,11 @@
 // ----------------- MAIN COMPONENTS -----------------
-
-// @import "../components/main-components/main-copy.scss";
-// @import "../components/main-components/main-info.scss";
-// @import "../components/main-components/main-table.scss";
-// @import "../components/main-components/address-form.scss";
-// @import "../components/main-components/miners-info.scss";
-
-//new
-
 @import "../components/main-components/main-top.scss";
 @import "../components/main-components/request-form.scss";
 @import "../components/main-components/main-slider.scss";
 @import "../components/main-components/settings.scss";
 @import "../components/main-components/review.scss";
 @import "../components/main-components/profile-form.scss";
+@import "../components/main-components/payment-form.scss";
 
 
 // ----------------- CARDS COMPONENTS -----------------
@@ -28,16 +20,6 @@
 @import "../components/cards/info-card.scss";
 
 // ----------------- BLOCK COMPONENTS -----------------
-// @import "../components/history-list.scss";
-// @import "../components/task-list.scss";
-// @import "../components/task-card.scss";
-// @import "../components/wallet-card.scss";
-// @import "../components/boost-card.scss";
-// @import "../components/boost-list.scss";
-// @import "../components/level-info.scss";
-
-
-
 @import "../components/dream-nav.scss";
 @import "../components/info-list.scss";
 @import "../components/labels-list.scss";

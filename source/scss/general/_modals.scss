@@ -6,27 +6,18 @@
 
 @keyframes top {
   0%{
-    transform: translateY(100%);
+    transform: translate(-50%, 100%);
   }
   100%{
-    transform: translateY(0);
+    transform: translate(-50%, 0);
   }
 }
 
 .modal {
   margin: 0 auto;
-  transform: translateY(100%);
+  transform: translate(-50%, 100%);
   display: none;
   
-@keyframes top {
-  0%{
-    transform: translateY(100%);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
-
   &.active {
     animation: top .2s ease .2s forwards;
   }
@@ -34,20 +25,17 @@
   &__close{
     position: absolute;
     z-index: 10;
-    top: 24px;
-    right: 24px;
+    top: 12px;
+    right: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    background: rgba(255, 255, 255, 0.11);
-    backdrop-filter: blur(54.36563491821289px);
+    width: 24px;
+    height: 24px;
 
     svg{
-      width: 12px;
-      height: 12px;
+      width: 100%;
+      height: 100%;
       transition: all .3s ease;
       pointer-events: none;
     }
@@ -57,5 +45,27 @@
         transform: scale(1.1);
       }
     }
+  }
+}
+
+.profile-modal{
+  align-self: center;
+  margin: auto;
+  transform: scale(.8);
+
+  &.active {
+    animation: none;
+    transform: scale(1);
+  }
+}
+
+.error-modal{
+  align-self: center;
+  margin: auto;
+  transform: scale(.8);
+
+  &.active {
+    animation: none;
+    transform: scale(1);
   }
 }

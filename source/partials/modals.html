@@ -1,31 +1,402 @@
 <div class="overlay fixed-block" data-overlay>
-
-    <div class="modal" data-popup="details">
+    <div class="overlay__bg"></div>
+    <div class="profile-modal modal" data-popup="buy_now">
         <button class="modal__close close">
-            <svg width='12' height='12'>
-                <use href='img/sprite/sprite.svg#xmark'></use>
+            <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#close'></use>
             </svg>
         </button>
 
         <div class="modal__box">
-            <span class="modal__title">Wallet  details</span>
+            <span class="modal__icon">
+                <svg width='80' height='80'>
+                    <use href='img/sprite/sprite.svg#solar'></use>
+                </svg>
+            </span>
+            <div class="modal__wrapp">
+                <span class="modal__title">Unfortunately, you have used up your time for chatting with the
+                    advisor.</span>
 
-            <form class="adress-form" data-parent-adress>
-                <label class="adress-form__label" for="phrase">
-                    <span class="adress-form__text">Full wallet adress:</span>
-                    <span class="adress-form__value">So11JSgBGXtPuLPjQiKy3u5CVuRXVMFnKuUELA2JRNu9x</span>
-                </label>
+                <p>To continue the conversation, please top up your balance.</p>
+            </div>
 
-                
-                <label class="adress-form__label" for="phrase_2" >
-                <span class="adress-form__text">Seed phrase:</span>
-                <span class="adress-form__value copy">star moon sun earth fire wind water ice cloud shadow</span>
-                  <input data-value readonly type="hidden" name="phrase_2" id="phrase_2" class="adress-form__input" value="star moon sun earth fire wind water ice cloud shadow">
+            <button class="main-btn main-btn--yellow" data-btn-inner="debit">Buy now</button>
+        </div>
+    </div>
+
+    <div class="profile-modal modal" data-popup="buy_cancel">
+        <button class="modal__close close">
+            <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+        </button>
+
+        <div class="modal__box">
+            <span class="modal__icon">
+                <svg width='80' height='80'>
+                    <use href='img/sprite/sprite.svg#solar'></use>
+                </svg>
+            </span>
+            <div class="modal__wrapp">
+                <span class="modal__title">Unfortunately, you have used up your time for chatting with the
+                    advisor.</span>
+
+                <p>If you need to reschedule, please book a new session at your convenience.</p>
+            </div>
+
+            <button class="main-btn main-btn--yellow" data-btn-inner="order">Explore other advisors</button>
+        </div>
+    </div>
+
+    <div class="order-modal modal" data-popup="debit">
+      
+        <div class="modal__box">
+            <span class="modal__title">Add credit or debit card</span>
+
+            <form class="payment-form payment-form--add">
+                <label for="cardNumber" class="payment-form__label">
+                  <span class="payment-form__name">Card information</span>
+                  <input type="text" maxlength="19" inputmode="numeric" class="payment-form__input" name="cardNumber" id="cardNumber" placeholder="xxxx xxxx xxxx xxxx">
                 </label>
+    
+                <label for="expireDate" class="payment-form__label">
+                  <span class="payment-form__name">Expire date</span>
+                  <input type="text" maxlength="7" inputmode="numeric" class="payment-form__input" name="expireDate" id="expireDate" placeholder=" MM/YYYY">
+                </label>
+    
+                <label for="cvv" class="payment-form__label">
+                  <span class="payment-form__name">CVV</span>
+                  <input type="text" maxlength="3" inputmode="numeric" class="payment-form__input" name="cvv" id="cvv" placeholder="CVV">
+                </label>
+    
+    
+                <label class="custom-checkbox">
+                  <input type="checkbox" checked name="card" class="custom-checkbox__field">
+                  <span class="custom-checkbox__content">
+                    Save Details
+                  </span>
+                </label>
+    
+                <button class="main-btn" type="submit">Pay $10 </button>
+              </form>
             
-                <button class="main-btn" data-copy>Copy seed phrase</button>
+        </div>
+    </div>
+
+    <div class="order-modal modal" data-popup="order">
+        <div class="modal__box">
+            <span class="modal__title">Checkout – Order Details</span>
+
+            <form class="modal-order">
+                <ul class="modal-order__list">
+                    <li class="modal-order__item head">
+                        <span class="modal-order__name">Session with Advisor</span>
+                        <span class="modal-order__user">
+                            <img width="24" height="24" src="./img/index/Avatar.png" alt="image">
+                            Sophia Brown
+                        </span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Duration:</span>
+                        <span class="modal-order__value">10 minutes</span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Price:</span>
+                        <span class="modal-order__value">$10</span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Bonus:</span>
+                        <span class="modal-order__value">+0.5 minutes free</span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Total time:</span>
+                        <span class="modal-order__value">10.5 minutes</span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Total amount:</span>
+                        <span class="modal-order__value">$10</span>
+                    </li>
+                </ul>
+
+                <div class="modal-order__bottom">
+                    <p>Secure payment – after confirmation, you will receive access to the session.</p>
+        
+                    <label class="payment-checkbox">
+                    <input type="checkbox" checked name="card" class="payment-checkbox__field">
+                    <span class="payment-checkbox__content">
+                        <img width="26" height="26" src="./img/sprite/Card.svg" alt="icon">
+        
+                        xxxx xxxx xxxx 3457
+                    </span>
+                    </label>
+        
+                    <a href="#" class="payment-link">
+                        <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#prime_plus'></use>
+                        </svg>
+                        Add new card
+                    </a>
+                </div>
+              </form>
+        </div>
+    </div>
+
+    <div class="order-modal modal" data-popup="order_details">
+        <div class="modal__box">
+            <span class="modal__title">Checkout – Order Details</span>
+
+            <form class="modal-order">
+                <ul class="modal-order__list">
+                    <li class="modal-order__item head">
+                        <span class="modal-order__name">Session with Advisor</span>
+                        <span class="modal-order__user">
+                            <img width="24" height="24" src="./img/index/Avatar.png" alt="image">
+                            Sophia Brown
+                        </span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Duration:</span>
+                        <span class="modal-order__value">10 minutes</span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Price:</span>
+                        <span class="modal-order__value">$10</span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Bonus:</span>
+                        <span class="modal-order__value">+0.5 minutes free</span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Total time:</span>
+                        <span class="modal-order__value">10.5 minutes</span>
+                    </li>
+                    <li class="modal-order__item">
+                        <span class="modal-order__name">Total amount:</span>
+                        <span class="modal-order__value">$10</span>
+                    </li>
+                </ul>
+
+                <div class="modal-order__bottom">
+                    <p>Secure payment – after confirmation, you will receive access to the session.</p>
+        
+                    <a href="#" class="payment-link">
+                        <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#prime_plus'></use>
+                        </svg>
+                        Add new card
+                    </a>
+                </div>
+              </form>
+        </div>
+    </div>
+    
+    <div class="profile-modal modal" data-popup="pricing">
+        <div class="modal__box">
+            <div class="modal__top">
+                <span class="modal__pretitle yellow">Pricing & Bonus Minutes</span>
+                <span class="modal__text">The more time you choose, the more bonus minutes you get!</span>
+
+                <ul class="pagination">
+                    <li class="pagination__item">
+                        <button class="pagination__bullet active"></button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__bullet"></button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__bullet"></button>
+                    </li>
+                </ul>
+
+                <p>Buy time, get a consultation with an advisor, and use any remaining minutes with the same or another expert.</p>
+            </div>
+            <form class="modal__form">
+                <ul class="modal__list">
+                    <li class="modal__item">
+                        <label class="price-checkbox">
+                          <input type="checkbox" checked name="price" class="price-checkbox__field">
+                          <span class="price-checkbox__content">
+                            <i>5 min – $5</i>
+                            +
+                            <b> 0.5 min bonus</b>
+                          </span>
+                        </label>
+                    </li>
+                    <li class="modal__item">
+                        <label class="price-checkbox">
+                          <input type="checkbox" name="price_2" class="price-checkbox__field">
+                          <span class="price-checkbox__content">
+                            <i>10 min – $10</i>
+                            +
+                            <b>2 min bonus</b>
+                          </span>
+                        </label>
+                    </li>
+                    <li class="modal__item">
+                        <label class="price-checkbox">
+                          <input type="checkbox" name="price_3" class="price-checkbox__field">
+                          <span class="price-checkbox__content">
+                            <i>20 min – $20</i>
+                            +
+                            <b>5 min bonus</b>
+                          </span>
+                        </label>
+                    </li>
+                    <li class="modal__item">
+                        <label class="price-checkbox">
+                          <input type="checkbox" name="price_4" class="price-checkbox__field">
+                          <span class="price-checkbox__content">
+                            <i>50 min – $50</i>
+                            +
+                            <b>15 min bonus</b>
+                          </span>
+                        </label>
+                    </li>
+                    <li class="modal__item">
+                        <label class="price-checkbox">
+                          <input type="checkbox" name="price_5" class="price-checkbox__field">
+                          <span class="price-checkbox__content">
+                            <i>70 min – $70</i>
+                            +
+                            <b>20 min bonus</b>
+                          </span>
+                        </label>
+                    </li>
+                </ul>
+
+                <button class="main-btn main-btn--yellow" data-btn-inner="order_details">Continue</button>
             </form>
         </div>
     </div>
 
+    <div class="profile-modal modal" data-popup="payment_delete">
+        <button class="modal__close close">
+            <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+        </button>
+
+        <div class="modal__box">
+            <span class="modal__icon">
+                <svg width='80' height='80'>
+                    <use href='img/sprite/sprite.svg#check2'></use>
+                </svg>
+            </span>
+            <div class="modal__wrapp">
+                <span class="modal__title">Your profile has been successfully deleted. We hope to see you again!</span>
+            </div>
+
+            <button class="main-btn main-btn--yellow">OK</button>
+        </div>
+    </div>
+
+    <div class="profile-modal modal" data-popup="session_cancel">
+        <div class="modal__inner">
+            <div class="modal__wrapp">
+                <span class="modal__title">Cancel scheduled session</span>
+
+                <p>Are you sure you want to cancel your scheduled session with <b>Sophia Brown</b> at <b>1:00 PM on Friday, June 24</b>?</p>
+            </div>
+
+            <div class="modal__btns">
+                <button class="main-btn main-btn--transparent close">NO</button>
+                <button class="main-btn main-btn--yellow">YES</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="profile-modal modal" data-popup="profile_delete">
+        <button class="modal__close close">
+            <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+        </button>
+
+        <div class="modal__box">
+            <span class="modal__icon profile">
+                <svg width='60' height='100'>
+                    <use href='img/sprite/sprite.svg#profile'></use>
+                </svg>
+            </span>
+            <div class="modal__wrapp">
+                <span class="modal__title">Are you sure you want to delete your profile?</span>
+
+                <p>Don't miss your chance to get answers to life's toughest questions with help from our advisors!</p>
+            </div>
+
+            <div class="modal__btns">
+                <button class="main-btn main-btn--yellow">NO</button>
+                <button class="main-btn main-btn--transparent" data-btn-inner="payment_delete">YES</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="profile-modal modal" data-popup="payment_add">
+        <button class="modal__close close">
+            <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+        </button>
+
+        <div class="modal__box">
+            <span class="modal__icon">
+                <svg width='80' height='80'>
+                    <use href='img/sprite/sprite.svg#check2'></use>
+                </svg>
+            </span>
+            <div class="modal__wrapp">
+                <span class="modal__title">You have successfully added a payment method.</span>
+            </div>
+
+            <button class="main-btn main-btn--yellow">OK</button>
+        </div>
+    </div>
+    
+    <div class="profile-modal modal" data-popup="session">
+        <button class="modal__close close">
+            <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+        </button>
+
+        <div class="modal__box mode">
+            <div class="modal__wrapp">
+                <span class="modal__pretitle">Payment confirmed!</span>
+
+                <span class="modal__title">Session scheduled successfully</span>
+
+                <p>Your session with <b>Sophia Brown</b> is scheduled for 9:00 AM on <b>Tuesday, June 5.</b><br>
+                    You can cancel your scheduled session on the Notifications tab.</p>
+            </div>
+
+            <span class="modal__icon">
+                <svg width='78' height='118'>
+                    <use href='img/sprite/sprite.svg#hourglass'></use>
+                </svg>
+            </span>
+
+            <button class="main-btn main-btn--yellow">Notifications</button>
+        </div>
+    </div>
+
+    <div class="error-modal modal" data-popup="error">
+        <div class="modal__box">
+            <div class="modal__top">
+                <span class="modal__title">Error</span>
+                <p>The text field cannot be empty.</p>
+            </div>
+
+            <button class="modal__btn close">OK</button>
+        </div>
+    </div>
 </div>
+
+<div class="loader">
+    <span class="loader__text">almost DONE!</span>
+    <p>We're adding your Credit card</p>
+    <img class="oader__icon" width="48" height="48" src="./img/loader.gif" alt="icon">
+</div>
+
+
